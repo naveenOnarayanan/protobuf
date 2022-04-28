@@ -865,14 +865,12 @@ py_library(
     srcs = glob(
         [
             "python/google/protobuf/**/*.py",
-            "python/google/**/*.py",
-            "python/google/*.py",
         ],
         exclude = [
             "python/google/protobuf/internal/*_test.py",
             "python/google/protobuf/internal/test_util.py",
         ],
-    ),
+    ) + ["python/google/__init__.py"],
     imports = ["python"],
     srcs_version = "PY2AND3",
 )
